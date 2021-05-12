@@ -78,3 +78,57 @@ int main()
     }
     return 0;
 }
+
+/* another solution_way shorter
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+int letter_to_pos(char c)
+{
+    if (c >= 65 && c <= 90)
+        return (c - 65);
+    else if (c >= 97 && c <= 122)
+        return (c - 32 - 65);
+    else
+        return (26);
+}
+
+int main()
+{
+    int L;
+    scanf("%d", &L);
+    int H;
+    scanf("%d", &H); fgetc(stdin);
+    char T[257];
+    scanf("%[^\n]", T); fgetc(stdin);
+    for (int i = 0; i < H; i++) {
+        char ROW[1025];
+        scanf("%[^\n]", ROW); 
+        fgetc(stdin);
+
+        int j = 0;
+        while (T[j] != '\0')
+        {
+            int pos_letter = letter_to_pos(T[j]) * L;
+            int k = 0;
+            while (k < L)
+            {
+                printf("%c", ROW[pos_letter + k]);
+                k++;
+            }
+            j++;
+        }
+        printf("\n");
+    }
+
+    // Write an answer using printf(). DON'T FORGET THE TRAILING \n
+    // To debug: fprintf(stderr, "Debug messages...\n");
+
+    return (0);
+}*/
