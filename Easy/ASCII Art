@@ -46,7 +46,7 @@ int main()
     }
     
 
-    for(int f=0;f<strlen(alphabet);f++){//ascii art: A starts at 0,B:4,C:8
+    for(int f=0;f<strlen(alphabet);f++){//ascii art: A starts at 0,B:A+L,C:B+L
         indexNum[f]=numFill;
         //printf("%d ",indexNum[f]);
         numFill+=L;
