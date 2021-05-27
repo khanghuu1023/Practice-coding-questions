@@ -1,3 +1,14 @@
+/*
+   Plans of tackling the problem:
+    1> goingn through the char array b[],and obtain the total number of '0's found as well as their index postions and store these positions to an array zero_Index_Pos[] 
+    2>do a loop num_of_zeros times:
+        a>replace a '0' in b[] with a '1' by using the index positions stored in zero_Index_Pos[]
+        b>do another loop startng the index location in a> till encountering another '0' or end of string: counting the num of ones found while doing the loop
+        c> assign the total num of ones to a variable( longest_ones) and compare with its previous value
+        d> reset b[] in a> back to '0'
+    3> print out the final answer
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
