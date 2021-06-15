@@ -6,7 +6,8 @@
 #include <stdbool.h>
 
 int main()
-{   int k=0;
+{   
+    int k=0;
     int total_water_drops=0;
     int N;
     int counting=0;
@@ -20,34 +21,13 @@ int main()
         total_water_drops=0;
         while(counting<strlen(line)){
             if(line[counting]=='f'){
-                if(counting==0||counting==N-1){
-                    line[counting]='0';
-                    if(line[counting+1]=='.'&&line[counting+2]=='f'){
-                        line[counting+1]='0';
-                        line[counting+2]='0';
-                    }
-                    total_water_drops++;
-                }else{
-                    line[counting]='0';
-                    if(line[counting+1]=='.'&&line[counting+2]=='f'){
-                        line[counting+1]='0';
-                        line[counting+2]='0';
-                    }
-                    if(line[counting+1]=='f'&&line[counting+2]=='f'){
-                        line[counting+1]='0';
-                        line[counting+2]='0';
-                    }
-                    
-                    total_water_drops++;
-                }
+                total_water_drops++;
                 counting+=3;
             }else{
                 counting++;
             }
         }
-        
-        printf("%d\n",total_water_drops);
-    }
-      
+            printf("%d\n",total_water_drops);
+        }
     return 0;
 }
