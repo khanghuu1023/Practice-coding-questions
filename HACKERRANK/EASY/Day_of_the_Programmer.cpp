@@ -8,11 +8,22 @@ string rtrim(const string &);
 
 /* *********************************MY SOLUTION**************************************** */
 string dayOfProgrammer(int year) {
-    int date{0};
-    if (year%4==0){
-        date=12;
+   string dayOfProgrammer(int year) {
+    int date{12};
+    if (year==1918){
+        date+=14;
+    }else if(year>1918){
+        if ( (year%4==0&&year%100!=0) || (year%400==0) ){
+            date=12;
+        }else{
+            date=13;
+        }
     }else{
-        date=13;
+        if ( year%4==0 ){
+            date=12;
+        }else{
+            date=13;
+        }
     }
     return (to_string(date)+".09."+to_string(year));
 }
